@@ -6,7 +6,7 @@ const Contact = props => {
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setStatus(false)
-    }, 500)
+    }, 2000)
 
     return () => {
       if (timeoutId) {
@@ -55,6 +55,7 @@ const Contact = props => {
                 <input type="reset" value="Clear"/>
               </li>
             </ul>
+            {status && <h3>Thank you!</h3>}
           </form>
         </section>
         <section className="split">
